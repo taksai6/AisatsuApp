@@ -34,16 +34,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         Log.d("UI_PARTS", String.valueOf(hourOfDay) + ":" + String.valueOf(minute));
                         if (hourOfDay >= 2 && hourOfDay < 10) {
-                            Log.d("javatask", "おはよう");
+                            TextView textView = (TextView) findViewById(R.id.textView);
+                            textView.setText("おはよう");
+
                         } else if (hourOfDay >= 10 && hourOfDay < 18) {
-                            Log.d("javatask", "こんにちは");
+                            TextView textView = (TextView) findViewById(R.id.textView);
+                            textView.setText("こんにちは");
 
                         } else if (hourOfDay >= 18 && hourOfDay <= 24) {
-                            Log.d("javatask", "こんばんは");
+                            TextView textView = (TextView) findViewById(R.id.textView);
+                            textView.setText("こんばんは");
                         } else if(hourOfDay>=0&&hourOfDay<2) {
-                            Log.d("javatask", "こんばんは");
+                            TextView textView = (TextView) findViewById(R.id.textView);
+                            textView.setText("こんばんは");
                         }else {
-                            Log.d("javatask", "エラー");
+                            TextView textView = (TextView) findViewById(R.id.textView);
+                            textView.setText("エラー");
 
                         }
                     }
